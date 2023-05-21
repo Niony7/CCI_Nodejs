@@ -1,0 +1,45 @@
+<% for (row of rows){%>
+    <tr>
+        <td>
+            <%=row.codeMat %>
+        </td>
+        <td>
+            <%=row.nomApp%>
+        </td>
+        <td>
+            <%=row.designMet%>
+        </td>
+
+        <td>
+            <%=row.nomMat %>
+        </td>
+
+        <td>
+            <%=row.noteMat %>
+        </td>
+        <td>
+            <%=row.coefMat %>
+        </td>
+        <td>
+            <button class="btn btn-primary" data-toggle="modal" data-target="#editer_matiere_modal"
+                onclick="editer_matiere(id)" id=<%=row.codeMat %> ><i class="fa fa-edit"></i></button>
+        </td>
+        <td>
+            <button class="btn btn-danger " onclick="suppr_matiere(id)" id=<%=row.codeMat %> ><i
+                    class="fa fa-trash"></i></button>
+        </td>
+    </tr>
+    <%}%>
+        <tr>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td style="font-size: 14px;"> <strong>Moyennne:</strong></td>
+            <td style="font-size: 16px;">
+                <strong>
+                    <%= rows.slice(-1) %>
+                </strong>
+            </td>
+            <td>
+            </td>
+        </tr>

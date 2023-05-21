@@ -1,0 +1,53 @@
+<div class="modal fade" id="new_matiere_modal" tabindex="-1" role="dialog" aria-labelledby="new_matiere_moda_label"
+    aria-hidden="true">
+    <div class="modal-dialog" role="document">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h5 class="modal-title" id="new_matiere_modal">Nouveau Matiere</h5>
+                <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                    <span aria-hidden="true">&times;</span>
+                </button>
+            </div>
+            <div class="modal-body">
+                <form>
+                    <div class="form-group">
+                        <label for="code-matiere" class="col-form-label">code Matiere:</label>
+                        <input type="text" class="form-control" id="code-matiere" required>
+
+                    </div>
+
+                    <div class="form-group">
+                        <label for="matricule-app-matier" class="col-form-label">Matricule Apprenti:</label>
+                        <input type="text" class="form-control" id="matricule-app-matier" required>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="code-metier-mat" class="col-form-label">code metier:</label>
+                        <select type="text" class="form-control" id="code-metier-mat" class="form-control">
+
+                        </select>
+                    </div>
+                    <div class="form-group">
+                        <label for="nom-matiere" class="col-form-label">Nom matiere:</label>
+                        <input type="text" class="form-control" id="nom-matiere" required>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="note-matiere" class="col-form-label">Note Matiere:</label>
+                        <input type="text" class="form-control" id="note-matiere" required>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="coef-matiere" class="col-form-label">coeficient Matiere:</label>
+                        <input type="text" class="form-control" id="coef-matiere" required>
+                    </div>
+
+                </form>
+            </div>
+            <div class="modal-footer">
+                <button type="button" class="btn btn-secondary" data-dismiss="modal">Fermer</button>
+                <button type="button" class="btn btn-primary" onclick="ajout_matiere()">Ajouter </button>
+            </div>
+        </div>
+    </div>
+</div>

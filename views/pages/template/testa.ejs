@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="">
+    <meta name="author" content="Dashboard">
+    <meta name="keyword" content="Dashboard, Bootstrap, Admin, Template, Theme, Responsive, Fluid, Retina">
+    <title>Gestion des Apprentis FFD</title>
+    <link href="css/style-responsive.css" rel="stylesheet">
+
+    <script src="html2pdf/html2pdf.bundle.min.js"></script>
+
+</head>
+
+<body>
+    <div style="text-align :center " id="testa">
+        <p style="text-align :center "><strong>REPOBLIKAN’I MADAGASIKARA</strong> </p>
+        <p style="text-align :center ">Tanindrazana-Fahafahana-Fandrosoana</p>
+        <p style="text-align :center ">-----------------------</p>
+        <p style="text-align :center ">MINISTERE DE L’ ECONOMIE, DU COMMERCE ET DE L’INDUSTRIE</p>
+        <p style="text-align :center ">-------------------------</p>
+        <br>
+        <br>
+        <br>
+
+
+        <div class="row mb">
+            <div class="content-panel">
+                <div class="adv-table">
+                    <table cellpadding="0" cellspacing="0" border="0" class="display table table-bordered"
+                        id="hidden-table-info">
+                        <thead style="text-align :center ">
+                            <tr>
+                                <th style="border:1px solid black" class="hidden-phone">Code Matiere</th>
+                                <th style="border:1px solid black" class="hidden-phone">Nom Apprenti</th>
+                                <th style="border:1px solid black" class="hidden-phone">Designation Metier</th>
+                                <th style="border:1px solid black" class="hidden-phone">Nom Matiere</th>
+                                <th style="border:1px solid black" class="hidden-phone">Note Matiere /20</th>
+                                <th style="border:1px solid black" class="hidden-phone">coefficent Matiere</th>
+
+                            </tr>
+                        </thead>
+                        <tbody id="tbody-matiere">
+                            <% for ( row of rows){%>
+                                <tr>
+                                    <td style="border:1px solid black">
+                                        <%=row.codeMat %>
+                                    </td>
+
+                                    <td style="border:1px solid black">
+                                        <%=row.nomApp%>
+                                    </td>
+                                    <td style="border:1px solid black">
+                                        <%=row.designMet%>
+                                    </td>
+
+                                    <td style="border:1px solid black">
+                                        <%=row.nomMat %>
+                                    </td>
+
+                                    <td style="border:1px solid black">
+                                        <%=row.noteMat %>
+                                    </td>
+                                    <td style="border:1px solid black">
+                                        <%=row.coefMat %>
+                                    </td>
+
+                                </tr>
+                                <%}%>
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+        </div>
+    </div>
+    <script src="html2pdf/html2pdf.bundle.min.js"></script>
+    <script type="text/javascript">
+        var element = document.getElementById("testa")
+        html2pdf(testa, {
+            margin: 10,
+            filename: 'facture.pdf',
+            image: { type: 'jpeg', quality: 0.98 },
+            html2canvas: { scale: 2, logging: true, dpi: 192, letterRendering: true },
+            jsPDF: { unit: 'mm', format: 'a4', orientation: 'portrait' }
+        })
+    </script>
+    <script src="html2pdf/html2pdf.bundle.min.js"></script>
+
+</body>
+
+</html>

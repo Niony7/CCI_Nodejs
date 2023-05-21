@@ -1,0 +1,78 @@
+<div class="modal fade" id="new_apprenti_modal" tabindex="-1" role="dialog" aria-labelledby="new_apprenti_moda_label"
+    aria-hidden="true">
+    <div class="modal-dialog" role="document">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h5 class="modal-title" id="new_visiteur_modal">Nouveau Apprenti</h5>
+                <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                    <span aria-hidden="true">&times;</span>
+                </button>
+            </div>
+            <div class="modal-body">
+                <form>
+                    <div class="row">
+                        <div class="col-lg-6">
+                            <div class="form-group">
+                                <label for="matricule-apprenti" class="col-form-label">Matricule Apprenti:</label>
+                                <input type="text" class="form-control" id="matricule-apprenti" required>
+                            </div>
+                        </div>
+                        <div class="col-lg-6">
+                            <div class="form-group">
+                                <label for="nom-apprenti" class="col-form-label">Nom Apprenti:</label>
+                                <input type="text" class="form-control" id="nom-apprenti" required>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="col-lg-6">
+                            <div class="form-group">
+                                <label for="prenom-apprenti" class="col-form-label">Prenom Apprenti:</label>
+                                <input type="text" class="form-control" id="prenom-apprenti" required>
+                            </div>
+                        </div>
+                        <div class="col-lg-6">
+                            <div class="form-group">
+                                <label for="date-naiss" class="col-form-label">Date de Naissance:</label>
+                                <input type="date" class="form-control" required id="date-naiss">
+                            </div>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="col-lg-6">
+                            <div class="form-group">
+                                <label for="bacc-serie" class="col-form-label">BACC série:</label>
+                                <input type="text" class="form-control" id="bacc-serie" required>
+                            </div>
+                        </div>
+                        <div class="col-lg-6">
+                            <div class="form-group">
+                                <label for="anne-bacc" class="col-form-label">Année d'obtension du BACC:</label>
+                                <input type="text" class="form-control" id="anne-bacc" required>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="col-lg-6">
+                            <div class="form-group">
+                                <label for="num-phone" class="col-form-label">numero Telephone:</label>
+                                <input type="text" class="form-control" id="num-phone" required>
+                            </div>
+                        </div>
+                        <div class="col-lg-6">
+                            <div class="form-group">
+                                <label for="e-mail" class="col-form-label">Email:</label>
+                                <input type="tex" class="form-control" id="e-mail" required>
+                            </div>
+                        </div>
+                    </div>
+
+                </form>
+            </div>
+            <div class="modal-footer">
+                <button type="button" class="btn btn-secondary" data-dismiss="modal">Fermer</button>
+                <button type="button" class="btn btn-primary" onclick="ajout_apprenti('')">Ajouter Apprenti</button>
+            </div>
+        </div>
+    </div>
+</div>

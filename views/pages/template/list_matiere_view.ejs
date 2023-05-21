@@ -1,0 +1,94 @@
+<section class="wrapper" style="padding-left: 2em; padding-right: 2em;">
+    <h3><i class="fa fa-angle-right"></i> Listages des notes<br>
+    </h3>
+    <div class="row">
+        <div class="col-lg-6">
+            <div class="form-group">
+                <div class="col-md-4">
+                    <div class="input-group">
+                        <input type="text" placeholder="Entrer Imatricule ex:IM-000-19 " class="form-control matApp-mat"
+                            id="matApp-mat" class="form-control" style="width: 220px;" />
+                        <span class="input-group-btn">
+                            <button class="btn btn-theme04" onclick="rech_matiere() " id="btn-rech-matr">
+                                <i class="fa fa-search"></i>
+                            </button>
+                        </span>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="col-lg-6">
+            <a href="/testa" class="btn btn-success"> <i class="fa fa-print"></i>&nbsp; Exporte en pdf </a>
+        </div>
+        <!-- PDF generate -->
+    </div>
+    <br>
+    <div class="row mb">
+        <!-- page start-->
+        <div class="content-panel">
+            <div class="adv-table">
+                <table cellpadding="0" cellspacing="0" border="0" class="display table table-bordered" id="test">
+                    <!-- hidden-table-info -->
+                    <thead>
+                        <tr>
+                            <th>Code Matiere</th>
+                            <th>Nom Apprenti</th>
+                            <th>Designation Metier</th>
+                            <th class="hidden-phone">Nom Matiere</th>
+                            <th class="hidden-phone">Note Matiere /20</th>
+                            <th class="hidden-phone">coefficent Matiere</th>
+                            <th class="hidden-phone">Editer</th>
+                            <th class="hidden-phone">Supprimer</th>
+                        </tr>
+                    </thead>
+                    <tbody id="tbody-matiere">
+                        <% for (row of rows){%>
+                            <tr>
+                                <td>
+                                    <%=row.codeMat %>
+                                </td>
+
+                                <td>
+                                    <%=row.nomApp%>
+                                </td>
+                                <td>
+                                    <%=row.designMet%>
+                                </td>
+
+                                <td>
+                                    <%=row.nomMat %>
+                                </td>
+
+                                <td>
+                                    <%=row.noteMat %>
+                                </td>
+                                <td>
+                                    <%=row.coefMat %>
+                                </td>
+                                <td>
+                                    <button class="btn btn-primary" data-toggle="modal"
+                                        data-target="#editer_matiere_modal" onclick="editer_matiere(id)"
+                                        id=<%=row.codeMat %> ><i class="fa fa-edit"></i></button>
+                                </td>
+                                <td>
+                                    <button class="btn btn-danger " onclick="suppr_matiere(id)" id=<%=row.codeMat %> ><i
+                                            class="fa fa-trash"></i></button>
+                                </td>
+                            </tr>
+                            <%}%>
+                    </tbody>
+                </table>
+            </div>
+        </div>
+        <!-- page end-->
+    </div>
+
+
+    <!-- /row -->
+</section>
+<script>
+    $(document).ready(function () {
+        $("#test").DataTable()
+    })
+</script>
+<!-- /wrapper -->

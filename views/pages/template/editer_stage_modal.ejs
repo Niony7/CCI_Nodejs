@@ -1,0 +1,46 @@
+<div class="modal fade" id="editer_stage_modal" tabindex="-1" role="dialog" aria-labelledby="editer_stage_modal"
+    aria-hidden="true">
+    <div class="modal-dialog" role="document">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h5 class="modal-title" id="editer_stage_modal">Modification stage</h5>
+                <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                    <span aria-hidden="true">&times;</span>
+                </button>
+            </div>
+            <div class="modal-body">
+                <form>
+                    <div class="form-group">
+                        <label for="edt-id-stage" class="col-form-label">Identifiant du stage:</label>
+                        <input type="text" class="form-control" id="edt-id-stage" required readonly>
+
+                    </div>
+                    <div class="form-group">
+                        <label for="edt-nom-entr" class="col-form-label">nom Entreprise:</label>
+                        <input type="text" class="form-control" id="edt-nom-entr" required>
+
+                    </div>
+                    <div class="form-group">
+                        <label for="edt-mat-app-stage" class="col-form-label">Matricule Apprenti:</label>
+                        <input type="text" class="form-control" id="edt-mat-app-stage" required>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="edt-note-stage" class="col-form-label">note de stage:</label>
+                        <input type="text" class="form-control" id="edt-note-stage" required>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="edt-code-metier" class="col-form-label">design metier:</label>
+                        <input type="text" class="form-control" id="edt-code-metier" required>
+                    </div>
+
+                </form>
+            </div>
+            <div class="modal-footer">
+                <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+                <button type="button" class="btn btn-primary" onclick="modifier_stage()">Modifier stage</button>
+            </div>
+        </div>
+    </div>
+</div>

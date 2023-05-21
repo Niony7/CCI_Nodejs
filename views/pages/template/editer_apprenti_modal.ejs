@@ -1,0 +1,84 @@
+<div class="modal fade" id="editer_apprenti_modal" tabindex="-1" role="dialog" aria-labelledby="editer_apprenti"
+    aria-hidden="true">
+    <div class="modal-dialog" role="document">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h5 class="modal-title" id="editer_apprenti_modal">Modification Apprenti</h5>
+                <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                    <span aria-hidden="true">&times;</span>
+                </button>
+            </div>
+            <div class="modal-body">
+                <form>
+                    <div class="row">
+                        <div class="col-lg-6">
+                            <div class="form-group">
+                                <label for="editer-mat-apprenti" class="col-form-label">Matricule Apprenti:</label>
+                                <input type="text" maxlength="9" minlength="10" class="form-control"
+                                    id="editer-mat-apprenti" required>
+                                <!-- required readonly> -->
+                            </div>
+                        </div>
+                        <div class="col-lg-6">
+                            <div class="form-group">
+                                <label for="editer-nom-apprenti" class="col-form-label">Nom Apprenti:</label>
+                                <input type="text" maxLenght="25" minlength="3" class="form-control"
+                                    id="editer-nom-apprenti" required>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="col-lg-6">
+                            <div class="form-group">
+                                <label for="editer-prenom-apprenti" class="col-form-label">Prenom Apprenti:</label>
+                                <input type="text" maxlength="25" minlength="3" class="form-control"
+                                    id="editer-prenom-apprenti" required>
+                            </div>
+                        </div>
+                        <div class="col-lg-6">
+                            <div class="form-group">
+                                <label for="editer-date-naiss" class="col-form-label">Date de naissance:</label>
+                                <input type="date" class="form-control editer-date-naiss" id="editer-date-naiss"
+                                    required>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="col-lg-6">
+                            <div class="form-group">
+                                <label for="editer-bacc-serie" class="col-form-label">Bacc série:</label>
+                                <input type="text" maxlength="1" minlength="1" class="form-control"
+                                    id="editer-bacc-serie" required>
+                            </div>
+                        </div>
+                        <div class="col-lg-6">
+                            <div class="form-group">
+                                <label for="editer-anne-bacc" class="col-form-label">Année d'obtension du BACC:</label>
+                                <input type="text" maxlength="4" minlength="4" class="form-control"
+                                    id="editer-anne-bacc" required>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="col-lg-6">
+                            <div class="form-group">
+                                <label for="editer-num-phon" class="col-form-label">Numero telephone:</label>
+                                <input type="number" max="9" min="1" class="form-control" id="editer-num-phon" required>
+                            </div>
+                        </div>
+                        <div class="col-lg-6">
+                            <div class="form-group">
+                                <label for="editer-e-mail" class="col-form-label">Email:</label>
+                                <input type="text" class="form-control" id="editer-e-mail" required>
+                            </div>
+                        </div>
+                    </div>
+                </form>
+            </div>
+            <div class="modal-footer">
+                <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+                <button type="button" class="btn btn-primary" onclick="modifier_apprenti()">Modifier Visiteur</button>
+            </div>
+        </div>
+    </div>
+</div>

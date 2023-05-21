@@ -1,0 +1,62 @@
+<section class="wrapper" style="padding-left: 2em; padding-right: 2em;">
+    <h3><i class="fa fa-angle-right"></i> Listes des Stages</h3>
+    <div class="row mb">
+        <!-- page start-->
+        <div class="content-panel">
+            <div class="adv-table">
+                <table cellpadding="0" cellspacing="0" border="0" class="display table table-bordered" id="test">
+                    <thead>
+                        <tr>
+                            <th>Identifiant du stage</th>
+                            <th>Nom Entreprise</th>
+                            <th>Metier</th>
+                            <th>Nom d'Apprenti</th>
+                            <th class="hidden-phone">note stage</th>
+                            <th class="hidden-phone">Editer</th>
+                            <th class="hidden-phone">Supprimer</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <% for (row of rows){%>
+                            <tr>
+                                <td>
+                                    <%=row.idStage %>
+                                </td>
+                                <td>
+                                    <%=row.nomEntreprise %>
+                                </td>
+                                <td>
+                                    <%=row.designMet%>
+                                </td>
+                                <td>
+                                    <%=row.nomApp %>
+                                </td>
+                                <td>
+                                    <%=row.noteStage %>
+                                </td>
+                                <td>
+                                    <button class="btn btn-primary" data-toggle="modal"
+                                        data-target="#editer_stage_modal" onclick="editer_stage(id)" id=<%=row.idStage
+                                        %> ><i class="fa fa-edit"></i></button>
+                                </td>
+                                <td>
+                                    <button class="btn btn-danger " onclick="suppr_stage(id)" id=<%=row.idStage %> ><i
+                                            class="fa fa-trash"></i></button>
+                                </td>
+                            </tr>
+                            <%}%>
+                    </tbody>
+                </table>
+            </div>
+        </div>
+        <!-- page end-->
+    </div>
+    <!-- /row -->
+</section>
+<!-- /wrapper -->
+<!-- DATA TABLE -->
+<script>
+    $(document).ready(function () {
+        $("#test").DataTable()
+    })
+</script>

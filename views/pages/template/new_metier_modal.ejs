@@ -1,0 +1,31 @@
+<div class="modal fade" id="new_metier_modal" tabindex="-1" role="dialog" aria-labelledby="new_metier_moda_label"
+    aria-hidden="true">
+    <div class="modal-dialog" role="document">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h5 class="modal-title" id="new_metier_modal">Nouveau Metier</h5>
+                <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                    <span aria-hidden="true">&times;</span>
+                </button>
+            </div>
+            <div class="modal-body">
+                <form>
+                    <div class="form-group">
+                        <label for="code-metier" class="col-form-label">code metier:</label>
+                        <input type="text" class="form-control code-metier" id="code-metier" required>
+
+                    </div>
+                    <div class="form-group">
+                        <label for="design-metier" class="col-form-label">Designe metier:</label>
+                        <input type="text" class="form-control design-metier" id="design-metier" required>
+                    </div>
+
+                </form>
+            </div>
+            <div class="modal-footer">
+                <button type="button" class="btn btn-secondary" data-dismiss="modal">Fermer</button>
+                <button type="button" class="btn btn-primary" onclick="ajout_metier()">Ajouter </button>
+            </div>
+        </div>
+    </div>
+</div>

@@ -1,0 +1,100 @@
+<!-- <div id="testa"> -->
+<section class="wrapper" style="padding-left: 2em; padding-right: 2em;">
+    <h3><i class="fa fa-angle-right"></i> Listes des Apprentis</h3>
+    <div class="row mb">
+        <!-- page start-->
+
+        <div class="content-panel">
+            <div class="adv-table">
+                <table cellpadding="0" cellspacing="0" border="120" class="display table table-bordered" id="test">
+
+                    <thead>
+                        <tr>
+                            <th>Matricule Apprenti</th>
+                            <th>Nom Apprenti</th>
+                            <th class="hidden-phone">Prenom Apprenti</th>
+                            <th class="hidden-phone">Date de Naissance Apprenti</th>
+                            <th class="hidden-phone">BACC Série</th>
+                            <th class="hidden-phone">Date d'Obtention du BACC</th>
+                            <th class="hidden-phone">Numero Telephone</th>
+                            <th class="hidden-phone">Email</th>
+                            <th class="hidden-phone">Editer</th>
+                            <th class="hidden-phone">Supprimer</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <% for (row of rows){%>
+                            <tr>
+                                <td>
+                                    <%=row.matApp %>
+                                </td>
+                                <td>
+                                    <%=row.nomApp%>
+                                </td>
+                                <td>
+                                    <%=row.prenomApp %>
+                                </td>
+                                <td>
+                                    <%=row.dateNaiss %>
+                                </td>
+                                <td>
+                                    <%=row.baccSerie %>
+                                </td>
+                                <td>
+                                    <%=row.anneBacc %>
+                                </td>
+
+                                <td>
+                                    <%=row.numPhon %>
+                                </td>
+                                <td>
+                                    <%=row.Email %>
+                                </td>
+
+
+                                <td>
+                                    <button class="btn btn-primary" data-toggle="modal"
+                                        data-target="#editer_apprenti_modal" onclick="editer_apprenti(id)"
+                                        id=<%=row.matApp %>
+                                        ><i class="fa fa-edit"></i></button>
+                                </td>
+                                <td>
+                                    <button class="btn btn-danger " onclick="suppr_apprenti(id)" id=<%=row.matApp %>
+                                        ><i class="fa fa-trash"></i></button>
+                                </td>
+                            </tr>
+                            <%}%>
+                    </tbody>
+                </table>
+            </div>
+
+        </div>
+        <!-- page end-->
+    </div>
+    <!-- /row -->
+</section>
+<!-- /wrapper -->
+
+<!-- DATA TABLE -->
+<script>
+    $(document).ready(function () {
+        $("#test").DataTable()
+    })
+</script>
+
+<!-- </div> -->
+<!-- <script src="/html2pdf/html2pdf.bundle.min"></script>
+<script src="lib/jquery/jquery.min.js"></script>
+
+
+<script>
+    var element = document.getElementById("testa")
+    html2pdf(testa, {
+        margin: 10,
+        filename: 'Note.pdf',
+        image: { type: 'jpeg', quality: 0.98 },
+        html2canvas: { scale: 2, logging: true, dpi: 192, letterRendering: true },
+        jsPDF: { unit: 'mm', format: 'a4', orientation: 'portrait' }
+    })
+</script>
+<script src="html2pdf/html2pdf.bundle.min"></script> -->
